@@ -1,0 +1,16 @@
+<p>What's for dinner?</p>
+
+<form action='cast' method='post'>
+  <ul>
+    <% CHOICES.each do |id, text| %>
+      <li>
+        <label>
+          <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
+          <%= text %>
+        </label>
+      </li>
+    <% end %>
+  </ul>
+
+  <button type='submit'>Cast this vote!</button>
+</form>
